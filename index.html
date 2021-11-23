@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="app-style.css">
+  <title>Tip Calculator App</title>
 </head>
+
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <h3>SPLI <br> TTER</h3>
+  <main>
+    <div class="div-1">
+      <label for="bill">Bill</label>
+      <input type="number" name="bill" id="bill">
+      <label for="tip">Select Tip %</label>
+      <div class="percent">
+        <div class="five">5%</div>
+        <div class="ten">10%</div>
+        <div class="fifteen">15%</div>
+        <div class="twenty-five">25%</div>
+        <div class="fifty">50%</div>
+        <div class="custom">Custom</div>
+      </div>
+      <label for="num">Number of People
+        <input type="number" name="num" id="num">
+      </label>
+    </div>
+    <div class="div-2">
+      <label for="amt">Tip Amount <br> / person
+        <input type="number" name="amt" id="amt" placeholder="$0">
+      </label>
+      <label for="total">Total <br> / person
+        <input type="number" name="total" id="total" placeholder="$0">
+      </label>
+      <button>RESET</button>
+    </div>
+  </main>
+  <script src="app.js"></script>
 </body>
+
 </html>
