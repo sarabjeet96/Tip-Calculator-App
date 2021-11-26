@@ -1,49 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Tip calculator app</title>
+    <link rel="stylesheet" href="app-style.css" />
+    <script src="app.js" defer></script>
+    <script src="https://kit.fontawesome.com/4d129299c7.js"></script>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="logo">
+          <a href="#"><img src="./images/logo.svg" alt="logo" /></a>
+        </div>
+        <div class="bill">
+          <div class="bill-left">
+            <div>
+              <h2>Bill</h2>
+              <div class="bill-leftInput">
+                <i class="fas fa-dollar-sign"></i>
+                <input type="tel" id="billAmount" required autocomplete="off" />
+              </div>
+            </div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="app-style.css">
-  <title>Tip Calculator App</title>
-</head>
+            <div>
+              <h2>Select Tip %</h2>
+              <div class="bill-leftButtons">
+                <button class="tipPercentage">5%</button>
+                <button class="tipPercentage">10%</button>
+                <button class="tipPercentage">15%</button>
+                <button class="tipPercentage">25%</button>
+                <button class="tipPercentage">50%</button>
+                <input
+                  type="tel"
+                  id="tipPercentageCustom"
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
 
-<body>
-  <h3>SPLI <br> TTER</h3>
-  <main>
-    <div class="div-1">
-      <label for="bill">Bill</label>
-      <input type="number" name="bill" class="input" placeholder="0">
-      <label for="tip">Select Tip %</label>
-      <div class="percent">
-        <div class="element">5%</div>
-        <div class="element">10%</div>
-        <div class="element">15%</div>
-        <div class="element">25%</div>
-        <div class="element">50%</div>
-        <input type="number" name="custom" placeholder="Custom"></input>
+            <div>
+              <h2>Number Of People</h2>
+
+              <div class="bill-leftInput">
+                <i class="fas fa-user"></i>
+                <input type="number" id="totalPeople" min="1" required />
+              </div>
+            </div>
+          </div>
+          <div class="bill-right">
+            <div>
+              <div class="bill-splitter">
+                <h2>
+                  Tip Amount <br />
+                  <span>/ person</span>
+                </h2>
+                <h1 id="billTipAmount">$0.00</h1>
+              </div>
+
+              <div class="bill-splitter">
+                <h2>
+                  Total <br />
+                  <span>/ person</span>
+                </h2>
+                <h1 id="billTotalPerPerson">$0.00</h1>
+              </div>
+            </div>
+            <div>
+              <button type="reset" id="resetButton">RESET</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <label for="num">Number of People
-        <input type="number" name="num" class="input" placeholder="0">
-      </label>
-    </div>
-    <div class="div-2">
-      <label for="amt"><span>Tip Amount</span>
-        <input type="number" name="amt" id="amt" placeholder="$0.00">
-        <br> / person
-      </label>
-      <label for="total"><span>Total</span> 
-        <input type="number" name="total" id="total" placeholder="$0.00">
-        <br> / person
-      </label>
-      <button>RESET</button>
-    </div>
-  </main>
-  <script src="app.js"></script>
-</body>
-
+    </section>
+  </body>
 </html>
